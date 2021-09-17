@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
 
 const Wrapper = styled.div`
   flex: 1;
@@ -53,12 +54,14 @@ const Button = styled.button`
 `;
 
 export default function CategoryItem({ category }) {
+  const history = useHistory();
+
   return (
     <Wrapper>
       <Image src={category.image} alt={category.title} />
       <Content>
         <Title>{category.title}</Title>
-        <Button>Shop now</Button>
+        <Button onClick={() => history.push('/shop')}>Shop now</Button>
       </Content>
     </Wrapper>
   );

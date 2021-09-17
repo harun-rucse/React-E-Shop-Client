@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { sliderItems } from '../data';
 
@@ -91,6 +92,7 @@ const Button = styled.button`
 `;
 
 export default function Slider() {
+  const history = useHistory();
   const [slideIndex, setSlideIndex] = useState(0);
   const data = sliderItems;
 
@@ -120,7 +122,7 @@ export default function Slider() {
             <ContentWrapper>
               <Title>{title}</Title>
               <Description>{description}</Description>
-              <Button>Shop now</Button>
+              <Button onClick={() => history.push('/shop')}>Shop now</Button>
             </ContentWrapper>
           </Slide>
         ))}

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { FaSearch, FaShoppingCart } from 'react-icons/fa';
 
 const Container = styled.div`
@@ -102,7 +103,9 @@ export default function Header() {
           </SearchWrapper>
         </Left>
         <Center>
-          <Logo>E-Shop</Logo>
+          <Link to="/">
+            <Logo>E-Shop</Logo>
+          </Link>
         </Center>
         <Right>
           <MenuItem>Register</MenuItem>
