@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
 import { FaShoppingCart, FaSearch, FaHeart } from 'react-icons/fa';
 
 const Content = styled.div`
@@ -64,8 +65,10 @@ const Icon = styled.div`
 `;
 
 export default function ProductItem({ product }) {
+  const history = useHistory();
+
   return (
-    <Wrapper>
+    <Wrapper onClick={() => history.push(`/products/${product.id}`)}>
       <Circle />
       <Image src={product.image} alt="Product Image" />
       <Content>

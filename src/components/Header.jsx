@@ -114,12 +114,14 @@ export default function Header() {
           <Link to="/login">
             <MenuItem>Login</MenuItem>
           </Link>
-          <MenuItem>
-            <Icon>
-              <FaShoppingCart style={{ fontSize: '20px' }} />
-              <Badge>5</Badge>
-            </Icon>
-          </MenuItem>
+          <Link to="/cart">
+            <MenuItem>
+              <Icon>
+                <FaShoppingCart style={{ fontSize: '20px' }} />
+                <Badge>5</Badge>
+              </Icon>
+            </MenuItem>
+          </Link>
         </Right>
       </Wrapper>
     </Container>
