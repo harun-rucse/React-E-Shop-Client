@@ -108,8 +108,12 @@ export default function Header() {
           </Link>
         </Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Login</MenuItem>
+          <Link to="/register">
+            <MenuItem>Register</MenuItem>
+          </Link>
+          <Link to="/login">
+            <MenuItem>Login</MenuItem>
+          </Link>
           <MenuItem>
             <Icon>
               <FaShoppingCart style={{ fontSize: '20px' }} />
