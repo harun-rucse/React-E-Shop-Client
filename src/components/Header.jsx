@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FaSearch, FaShoppingCart } from 'react-icons/fa';
+import { mobile } from '../utils/responsive';
 
 const Container = styled.div`
   height: 60px;
+  ${mobile({ height: '50px' })}
 `;
 
 const Wrapper = styled.div`
@@ -12,6 +14,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  ${mobile({ padding: '10px 0', paddingRight: '10px' })}
 `;
 
 const Left = styled.div`
@@ -24,6 +27,7 @@ const Left = styled.div`
 const Language = styled.h4`
   font-size: 14px;
   cursor: pointer;
+  ${mobile({ display: 'none' })}
 `;
 
 const SearchWrapper = styled.div`
@@ -32,11 +36,13 @@ const SearchWrapper = styled.div`
   align-items: center;
   padding: 5px;
   margin-left: 30px;
+  ${mobile({ marginLeft: '10px' })}
 `;
 
 const Input = styled.input`
   border: none;
   outline: none;
+  ${mobile({ width: '50px' })}
 `;
 
 const IconWrapper = styled.div``;
@@ -49,6 +55,7 @@ const Center = styled.div`
 const Logo = styled.h2`
   font-size: 30px;
   font-weight: bold;
+  ${mobile({ fontSize: '20px' })}
 `;
 
 const Right = styled.div`
@@ -57,6 +64,7 @@ const Right = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding-right: 10px;
+  ${mobile({ flex: 2 })}
 `;
 
 const MenuItem = styled.div`

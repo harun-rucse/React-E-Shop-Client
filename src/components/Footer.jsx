@@ -9,9 +9,11 @@ import {
 } from 'react-icons/fa';
 import { GrMail } from 'react-icons/gr';
 import styled from 'styled-components';
+import { tablet, mobile } from '../utils/responsive';
 
 const Wrapper = styled.div`
   display: flex;
+  ${mobile({ flexDirection: 'column' })}
 `;
 const Left = styled.div`
   flex: 1;
@@ -47,6 +49,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ display: 'none' })}
 `;
 
 const Heading = styled.h4`
@@ -63,12 +66,14 @@ const ListWrapper = styled.ul`
 const ListItem = styled.li`
   width: 50%;
   margin-bottom: 10px;
+  ${tablet({ width: '100%' })}
 `;
 
 const Right = styled.div`
   flex: 1;
   padding: 20px;
   margin-left: auto;
+  ${mobile({ marginLeft: '0', backgroundColor: '#fff6f6' })}
 `;
 
 const ContactItem = styled.div`

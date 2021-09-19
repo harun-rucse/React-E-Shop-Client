@@ -3,12 +3,16 @@ import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { sliderItems } from '../data';
+import { tablet, mobile } from '../utils/responsive';
 
 const Wrapper = styled.div`
   width: 100%;
   height: calc(100vh - 90px);
   position: relative;
   overflow: hidden;
+
+  ${tablet({ height: '40vh' })}
+  ${mobile({ display: 'none' })}
 `;
 
 const Arrow = styled.div`
@@ -70,6 +74,7 @@ const Title = styled.h3`
   font-size: 70px;
   font-weight: 300;
   text-transform: uppercase;
+  ${tablet({ fontSize: '40px' })}
 `;
 
 const Description = styled.p`

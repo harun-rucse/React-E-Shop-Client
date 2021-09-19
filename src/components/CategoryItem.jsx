@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
+import { tablet } from '../utils/responsive';
 
 const Wrapper = styled.div`
   flex: 1;
@@ -18,6 +19,7 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  ${tablet({ height: '25vh' })}
 `;
 const Content = styled.div`
   position: absolute;

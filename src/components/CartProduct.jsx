@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaPlus, FaMinus } from 'react-icons/fa';
+import { mobile, tablet } from '../utils/responsive';
 
 const Product = styled.div`
   display: flex;
@@ -14,6 +15,8 @@ const ProductDetail = styled.div`
 
 const Image = styled.img`
   width: 200px;
+  ${tablet({ width: '150px' })}
+  ${mobile({ width: '140px' })}
 `;
 
 const DetailWrapper = styled.div`

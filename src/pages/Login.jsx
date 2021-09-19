@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Announcement from '../components/Announcement';
+import { mobile, tablet } from '../utils/responsive';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -12,6 +13,8 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   background-color: gray;
+  ${tablet({ height: '60vh' })}
+  ${mobile({ height: '80vh' })}
 `;
 
 const Form = styled.form`
@@ -21,6 +24,8 @@ const Form = styled.form`
   padding: 30px;
   min-width: 25%;
   border-radius: 10px;
+  ${tablet({ padding: '20px', minWidth: '50%' })}
+  ${mobile({ minWidth: '80%' })}
 `;
 
 const Title = styled.h2`
@@ -37,6 +42,7 @@ const Input = styled.input`
   padding: 10px 20px;
   margin-bottom: 10px;
   font-size: 14px;
+  ${mobile({ padding: '10px' })}
 `;
 
 const Button = styled.button`

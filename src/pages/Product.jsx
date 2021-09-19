@@ -2,11 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import Layout from '../components/Layout';
+import { mobile, tablet } from '../utils/responsive';
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  ${tablet({ padding: '20px 0' })}
+  ${mobile({ flexDirection: 'column' })}
 `;
 
 const ImageWrapper = styled.div`
@@ -17,6 +20,9 @@ const ImageWrapper = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 80vh;
+  object-fit: cover;
+  ${tablet({ height: '40vh' })}
+  ${mobile({ height: '30vh' })}
 `;
 
 const ContentWrapper = styled.div`
@@ -44,11 +50,13 @@ const FilterWrapper = styled.div`
   justify-content: space-between;
   margin: 30px 0;
   width: 60%;
+  ${mobile({ flexDirection: 'column' })}
 `;
 
 const Filter = styled.div`
   display: flex;
   align-items: center;
+  ${mobile({ marginBottom: '20px' })}
 `;
 
 const FilterText = styled.p`
@@ -69,6 +77,7 @@ const FilterColor = styled.div`
 const Select = styled.select`
   padding: 10px;
   margin-right: 10px;
+  ${mobile({ marginLeft: '15px' })}
 `;
 
 const Option = styled.option`

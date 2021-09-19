@@ -6,6 +6,7 @@ import CartProduct from '../components/CartProduct';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import { cartProducts } from '../data';
+import { mobile, tablet } from '../utils/responsive';
 
 const Wrapper = styled.div`
   margin-bottom: 50px;
@@ -25,9 +26,17 @@ const ActionWrapper = styled.div`
   align-items: center;
   padding: 0 30px;
   margin: 30px 0;
+  ${mobile({ padding: '0 10px' })}
 `;
 
-const Action = styled.div``;
+const Action = styled.div`
+  ${mobile({
+    display: 'flex',
+    flexDirection: 'column',
+    textAlign: 'center',
+    fontSize: '14px',
+  })}
+`;
 
 const Button = styled.button`
   padding: 10px 20px;
@@ -37,12 +46,14 @@ const Button = styled.button`
   color: ${(props) => (props.outlined ? 'black' : 'white')};
   border: ${(props) => (props.outlined ? '2px solid teal' : 'none')};
   cursor: pointer;
+  ${tablet({ padding: '10px', fontSize: '12px' })}
 `;
 
 const ContentWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px 30px 20px 20px;
+  ${tablet({ flexDirection: 'column' })}
 `;
 
 const ProductInfo = styled.div`
@@ -55,6 +66,7 @@ const ProductSummary = styled.div`
   border-radius: 10px;
   padding: 20px;
   height: 60vh;
+  ${tablet({ width: '100%', marginTop: '30px' })}
 `;
 
 const SummaryTitle = styled.h2`
